@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>OUFU — Your offer, unfolded.</title>
+
+    <link rel="stylesheet" href="./entrance.css">
+</head>
+
+<body>
+    <main id="destination" hidden>
+        <div class="toolbar"><button id="back">OUFU / 返回入口</button><button id="switch">LOGIN</button></div><iframe
+            id="website" title="OUFU 官网展示" src="about:blank" hidden></iframe>
+        <section id="login" hidden>
+            <div class="login-art" aria-hidden="true"><i class="shape circle"></i><i class="shape triangle"></i><i
+                    class="shape star"></i><span>YOUR<br>OFFER,<br>UNFOLDED.</span></div>
+            <div class="form-wrap"><span class="eyebrow">OUFU / PERSONAL SPACE</span>
+                <h1>Welcome<br>back.</h1>
+                <p>你的下一程，从这里开始。</p>
+                <form><label for="username">用户名 / Username</label><input id="username" name="username"
+                        autocomplete="username" required placeholder="输入你的用户名"><label for="password">密码 /
+                        Password</label>
+                    <div class="password"><input id="password" name="password" type="password"
+                            autocomplete="current-password" required placeholder="输入你的密码"><button type="button"
+                            id="reveal" aria-label="显示密码">显示</button></div><button class="submit">登录
+                        <span>＋</span></button>
+                    <p id="message" role="status">前端演示 · 账号服务尚未接入</p>
+                </form><small>学生 / 公司员工 / 超级管理员</small>
+            </div>
+        </section>
+    </main>
+    <section id="entrance" aria-label="选择官网或登录">
+        <div class="question"><h1>Welcome to OUFU!</h1>
+        </div><button class="side left" data-target="home" aria-label="进入 OUFU 官网"><span class="orb"
+                aria-hidden="true"></span><span class="rules" aria-hidden="true"></span><span class="copy"><span
+                    class="number">01</span><span class="word"
+                    aria-hidden="true"><b>O</b><b>U</b><b>F</b><b>U</b></span><span class="description">Your offer,
+                    unfolded.</span><span class="enter">Enter <span>-></span></span></span></button><button
+            class="side right" data-target="login" aria-label="进入 LOGIN 登录"><span class="shapes" aria-hidden="true"><i
+                    class="shape circle"></i><i class="shape pill"></i><i class="shape triangle"></i><i
+                    class="shape square"></i><i class="shape star"></i><i class="shape ring"></i></span><span
+                class="copy"><span class="number">02</span><span class="word"
+                    aria-hidden="true"><b>L</b><b>O</b><b>G</b><b>I</b><b>N</b></span><span class="description">Your
+                    next chapter starts here.</span><span class="enter">Enter
+                    <span>+</span></span></span></button>
+    </section>
+    <script src="./entrance.js"></script>
+</body>
+
+</html>
