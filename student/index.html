@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OUFU · 学生个人中心</title>
+    <link rel="stylesheet" href="vendor/css/app.min.css">
+    <link rel="stylesheet" href="vendor/css/icons.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+    <div class="student-shell">
+        <aside id="sidebar" class="sidenav-menu">
+            <a class="student-brand" href="#home" data-view="home">OUFU<span>STUDENT SPACE</span></a>
+            <div class="sidebar-scroll" tabindex="0" aria-label="学生菜单，可滚动">
+                <ul class="side-nav">
+                    <li class="side-nav-item"><button class="nav-home side-nav-link" data-view="home"><span
+                                class="menu-icon"><i class="ti ti-dashboard"></i></span><span
+                                class="menu-text">个人中心</span></button></li>
+                    <li class="side-nav-title mt-2">STUDENT APPLICATION</li>
+                </ul>
+                <details open>
+                    <summary><span class="menu-icon"><i class="ti ti-folder-filled"></i></span><span>申请用信息</span><i
+                            class="ti ti-chevron-down menu-chevron"></i></summary>
+                    <nav aria-label="申请用信息">
+                        <ul class="side-nav" id="modules"></ul>
+                    </nav>
+                </details>
+                <div class="sidebar-foot">YOUR OFFER, UNFOLDED.<br><small>每一步，都更接近你的下一站。</small></div>
+            </div>
+        </aside>
+        <div class="student-workspace">
+            <header class="student-topbar">
+                <div class="topbar-start"><button id="menu" class="topbar-link btn btn-outline-primary btn-icon"
+                        aria-label="切换侧栏" aria-expanded="false"><i class="ti ti-menu-deep fs-22"></i></button><span
+                        class="breadcrumb-copy">个人中心 <span class="muted"> / </span><span
+                            id="breadcrumb">首页</span></span></div>
+                <div class="account">
+                    
+                    <div class="topbar-item dropdown"><button
+                            class="topbar-link btn btn-outline-primary btn-icon dropdown-toggle drop-arrow-none"
+                            data-bs-toggle="dropdown" data-bs-offset="0,19" aria-expanded="false" aria-label="通知"><i
+                                class="ti ti-bell fs-22"></i></button>
+                        <div class="dropdown-menu dropdown-menu-end p-0 notification-menu">
+                            <div class="p-3 border-bottom fw-semibold">通知中心</div>
+                            <div class="p-4 text-center text-muted"><i
+                                    class="ti ti-bell-off fs-24 d-block mb-2"></i>暂无新通知<br><small>申请进度通知将在接入后台后显示</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topbar-item topbar-desktop"><button id="fullscreen"
+                            class="topbar-link btn btn-outline-primary btn-icon" aria-label="切换全屏"><i
+                                class="ti ti-maximize fs-22"></i></button></div>
+                    <div class="topbar-item dropdown"><button
+                            class="topbar-link btn btn-outline-primary dropdown-toggle drop-arrow-none user-toggle"
+                            data-bs-toggle="dropdown" data-bs-offset="0,19" aria-expanded="false" aria-label="账户菜单"><img
+                                src="vendor/images/avatar.jpg" width="24" height="24" class="rounded-circle"
+                                alt=""><span id="avatar" hidden></span><span id="account-name"></span><i
+                                class="ti ti-chevron-down user-chevron"></i></button>
+                        <div class="dropdown-menu dropdown-menu-end user-menu">
+                            <div class="dropdown-header">
+                                <h6 class="m-0">Welcome !</h6>
+                            </div>
+                            <div class="dropdown-divider"></div><button class="dropdown-item fw-semibold text-danger"
+                                id="logout"><i class="ti ti-logout me-1 fs-17 align-middle"></i> 退出登录</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main id="content" tabindex="-1"></main>
+            <footer>© OUFU 欧孚留学 </footer>
+        </div>
+    </div>
+    <div class="mobile-shade" id="shade" hidden></div>
+    <div id="notice" role="status" hidden></div>
+    <script src="vendor/js/vendor.min.js"></script>
+    <script src="schema.js"></script>
+    <script src="student.js"></script>
+</body>
+
+</html>
